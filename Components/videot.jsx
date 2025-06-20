@@ -20,7 +20,7 @@ const videot = ({movies}) => {
       </button>
       <button className='  hover:bg-gray-500  w-60 h-10 bg-white rounded-md flex justify-center items-center gap-1'>
         <FaCircleInfo className='' />
-        <h1 className='font-semibold py-2 text-sm md:text-md'>More Info</h1>
+        <h1 className='font-semibold py-2 text-sm md:text-md'>Info</h1>
       </button>
      </div>
 
