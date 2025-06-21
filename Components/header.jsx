@@ -56,16 +56,16 @@ https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production/consent/87b6a5c
     
     {user?(<div className='flex gap-3  justify-center items-center h-30'>
      <span className='text-white font-semibold font-light'>Welcome {user.name}!</span>
-     <div className=' bg-red-600 w-23 h-10 rounded-md flex justify-center  items-center' onClick={()=>{
+     <div className=' bg-red-600 w-27 h-8 rounded-md flex justify-center  items-center' onClick={()=>{
       handler();
      }}>
-     <span className='font-bold text-white cursor-pointer'>Sign Out</span>
+     <span className='font-bold text-white cursor-pointer text-sm '>Sign Out</span>
     </div>
-    {!showgpt? <div className=' bg-violet-600 w-25 p-2 mr-2  h-10 rounded-md flex justify-center  items-center' onClick={()=>{
+    {!showgpt? <div className=' bg-violet-600 w-27 p-2 mr-2  h-8 rounded-md flex justify-center  items-center' onClick={()=>{
       handlergpt();
      }}>
-      <span className='font-bold text-white cursor-pointer'>Gpt Search</span>
-    </div>:<div className=' bg-violet-600 w-25 p-2 mr-2  h-10 rounded-md flex justify-center  items-center' onClick={()=>{
+      <span className='font-bold text-white cursor-pointer text-sm'>Gpt Search</span>
+    </div>:<div className=' bg-violet-600 w-27 p-2 mr-2  h-8 rounded-md flex justify-center  items-center' onClick={()=>{
       handlergpt();
      }}>
       <span className='font-bold text-white cursor-pointer'>Back</span>
