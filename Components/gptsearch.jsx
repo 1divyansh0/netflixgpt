@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from "@google/genai";
 import options from '../Constant/Cons'
 import Movielist from './movielist';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,21 +11,20 @@ const gptsearch = () => {
   
   const searchdata = useRef(null);
   // const [searchedmovie, setsearchedmovie] = useState("");
-   const apikey = import.meta.env.VITE_API_KEY;
    const dispatch = useDispatch();
    const {gptmoviesname,gptmovielist} = useSelector(state=>state.gpt);
    
   
 
-  const ai = new GoogleGenerativeAI(apikey);
+  const ai = new GoogleGenAI({ apiKey: "AIzaSyD_u7a0WVZG9fJJpwspzB6jblMaqcc23yo" });
  
 async function main(prompt) {
- const model = ai.getGenerativeModel({ model: "gemini-1.5-flash" }); // or "gemini-pro", "gemini-1.0-pro", etc.
-
-    const result = await model.generateContent(prompt);
-    const text =  result.response.text();
- console.log(text)
-  return text;
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: prompt,
+  });
+  // console.log(response.text)
+  return response.text;
 }
 //  console.log(searchedmovie);
 
